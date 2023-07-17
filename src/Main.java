@@ -2,6 +2,7 @@ import zadanie2.Eanglish;
 import zadanie2.Language;
 import zadanie2.Polish;
 import zadanie2.Zadanie2;
+import zadanie3.Kadry;
 
 import java.util.Scanner;
 
@@ -17,5 +18,6 @@ public class Main {
         languages[0] = polish;
         languages[1] = eanglish;
         zadanie2.execute(languages);
+
     }
 }
