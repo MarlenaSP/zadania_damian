@@ -1,0 +1,97 @@
+package zadanie3;
+
+import java.io.*;
+
+public class Kadry {
+    private Pracownik[] pracownicy;
+    private int zatrudnienie;
+
+    public Kadry() {
+        pracownicy = new Pracownik[100];
+        zatrudnienie = 0;
+    }
+
+    public void dodajPracownika(Pracownik pracownik) {
+        if (zatrudnienie < 100) {
+            pracownicy[zatrudnienie] = pracownik;
+            zatrudnienie++;
+        } else {
+            System.out.println("Nie można dodać pracownika");
+        }
+    }
+
+    public void dodajPracownikaInteraktywnie() {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+
+        try {
+            System.out.println("Podaj dane nowego pracownika");
+            System.out.println("imię: ");
+            String imie = bufferedReader.readLine();
+            System.out.println("nazwisko: ");
+            String nazwisko = bufferedReader.readLine();
+            System.out.println("płaca: ");
+            double placa = Double.parseDouble(bufferedReader.readLine());
+            System.out.println("płeć M/K: ");
+            char plec = bufferedReader.readLine().charAt(0);
+            System.out.println("dział: ");
+            int dzial = Integer.parseInt(bufferedReader.readLine());
+
+            Pracownik pracownik = new Pracownik(imie, nazwisko, placa, plec, dzial);
+            dodajPracownika(pracownik);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void importujZPlikuTekstowego() {
+        try {
+            File file = new File("pracownicy.txt");
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String linia;
+            while ((linia = bufferedReader.readLine()) != null) {
+
+
+
+            }
+            bufferedReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Brak pliku");
+        } catch (IOException e) {
+            System.out.println("Problem z wczytywaniem pliku...");
+        }
+    }
+
+    public double sredniZarobek() {
+        double sumaPlac = 0;
+        for (int i = 0; i <= zatrudnienie; i++) {
+            sumaPlac += pracownicy[i];
+        }
+        return sumaPlac / zatrudnienie;
+    }
+
+    public double sredniZarobek(int dzial) {
+        double sumaPlac = 0;
+        int iloscPracownikowDzialu = 0;
+        for (int i = 0; i <= zatrudnienie; i++) {
+            if (pracownicy[i].czyPracujeWDziale(dzial)) {
+                sumaPlac = pracownicy[i];
+                iloscPracownikowDzialu++;
+
+            }
+        } return sumaPlac/iloscPracownikowDzialu;
+    }
+
+    public int dajDzialy(){
+        int[] dzialy = new int[];
+
+    }
+
+}
+
+
+
+
+

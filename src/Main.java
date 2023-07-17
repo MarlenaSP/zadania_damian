@@ -2,9 +2,6 @@ import zadanie2.Eanglish;
 import zadanie2.Language;
 import zadanie2.Polish;
 import zadanie2.Zadanie2;
-import zadanie3.Kadry;
-
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
