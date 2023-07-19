@@ -22,8 +22,6 @@ public class Kadry {
 
     public void dodajPracownikaInteraktywnie() {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
-
         try {
             System.out.println("Podaj dane nowego pracownika");
             System.out.println("imię: ");
@@ -52,9 +50,15 @@ public class Kadry {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String linia;
             while ((linia = bufferedReader.readLine()) != null) {
+                String pracownikZPliku[] = linia.split(" ");
+                String imie = pracownikZPliku[0];
+                String nazwisko = pracownikZPliku[1];
+                double placa = Double.parseDouble(pracownikZPliku[2]);
+                char plec = pracownikZPliku[3].charAt(0);
+                int dzial = Integer.parseInt(pracownikZPliku[4]);
 
-
-
+                Pracownik pracownik = new Pracownik(imie, nazwisko, placa, plec, dzial);
+                dodajPracownika(pracownik);
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {
@@ -66,8 +70,8 @@ public class Kadry {
 
     public double sredniZarobek() {
         double sumaPlac = 0;
-        for (int i = 0; i <= zatrudnienie; i++) {
-            sumaPlac += pracownicy[i];
+        for (int i = 0; i < zatrudnienie; i++) {
+            sumaPlac += pracownicy[i].getPlaca();
         }
         return sumaPlac / zatrudnienie;
     }
@@ -75,20 +79,39 @@ public class Kadry {
     public double sredniZarobek(int dzial) {
         double sumaPlac = 0;
         int iloscPracownikowDzialu = 0;
-        for (int i = 0; i <= zatrudnienie; i++) {
+        for (int i = 0; i < zatrudnienie; i++) {
             if (pracownicy[i].czyPracujeWDziale(dzial)) {
-                sumaPlac = pracownicy[i];
+                sumaPlac += pracownicy[i].getPlaca();
                 iloscPracownikowDzialu++;
-
             }
         } return sumaPlac/iloscPracownikowDzialu;
     }
 
-    public int dajDzialy(){
-        int[] dzialy = new int[];
+//    public int dajDzialy(){
+//        int[] dzialy = new int[];
+//
+//    }
 
+    public void pisz(){
+        System.out.println("Wczytano poprawnie dane pracowników z pliku");
+        System.out.println("Liczba pracowników: " + zatrudnienie);
+        for( int i = 0; i < zatrudnienie; i++){
+            System.out.println(pracownicy[i]);
+        }
+        System.out.println("Średnia płaca w firmie wynosi: " + sredniZarobek());
+        System.out.println("Średnia płaca w dziele 3 wynosi: " + sredniZarobek(3));
+        System.out.println("Średnia płaca w dziele 4 wynosi: " + sredniZarobek(4));
+
+        dodajPracownikaInteraktywnie();
+
+        System.out.println("Liczba pracowników: " + zatrudnienie);
+        for( int i = 0; i < zatrudnienie; i++){
+            System.out.println(pracownicy[i]);
+        }
+        System.out.println("Średnia płaca w firmie wynosi: " + sredniZarobek());
+        System.out.println("Średnia płaca w dziele 3 wynosi: " + sredniZarobek(3));
+        System.out.println("Średnia płaca w dziele 4 wynosi: " + sredniZarobek(4));
     }
-
 }
 
 
