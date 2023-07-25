@@ -112,6 +112,28 @@ public class Kadry {
         System.out.println("Średnia płaca w dziele 3 wynosi: " + sredniZarobek(3));
         System.out.println("Średnia płaca w dziele 4 wynosi: " + sredniZarobek(4));
     }
+
+    public void zapiszDoPliku() {
+        try {
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("pracownicy.data"));
+            output.writeObject(pracownicy);
+            output.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void odczytajZPliku() {
+        try {
+            FileInputStream fileInputStream = new FileInputStream("pracownicy.data");
+            ObjectInputStream object = new ObjectInputStream(fileInputStream);
+            pracownicy = (Pracownik[]) object.readObject();
+            object.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
