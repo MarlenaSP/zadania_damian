@@ -38,16 +38,16 @@ public class Employee {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String dane[] = line.split(" ");
-                String imie = dane[0];
-                String nazwisko = dane[1];
-                double placa = Double.parseDouble(dane[2]);
-                char plec = dane[3].charAt(0);
-                int dzial = Integer.parseInt(dane[4]);
+                String name = dane[0];
+                String surname = dane[1];
+                double salary = Double.parseDouble(dane[2]);
+                char sex = dane[3].charAt(0);
+                int section = Integer.parseInt(dane[4]);
 
-                Employee employee = new Employee(imie, nazwisko, placa, plec, dzial);
+                Employee employee = new Employee(name, surname, salary, sex, section);
                 if (counter < 100) {
                     employees[counter] = employee;
-                    System.out.println(employees);
+                    System.out.println(employee);
                     counter++;
                 }
             }
@@ -57,6 +57,19 @@ public class Employee {
         } catch (IOException e) {
             System.out.println("File upload problem");
         }
+        System.out.println("Liczba pracowników " + counter);
         return counter;
+    }
+
+    public static double mediumSalary(Employee[] employees, int nrSection, char sex) {
+        int numberOfEmployeesSection = 0;
+        int sumSalarySection = 0;
+        for (Employee employee : employees) {
+            if (employee != null && employee.section == nrSection && employee.sex == sex) {
+                numberOfEmployeesSection++;
+                sumSalarySection += employee.salary;
+            }
+        }
+        return (double) sumSalarySection / numberOfEmployeesSection;
     }
 }
