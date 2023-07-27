@@ -1,10 +1,9 @@
 package zadanie4;
 
-import zadanie3.Pracownik;
-
 import java.io.*;
 
-public class Employee {
+
+public class Employee implements Serializable {
     private String name;
     private String surname;
     private double salary;
@@ -71,5 +70,24 @@ public class Employee {
             }
         }
         return (double) sumSalarySection / numberOfEmployeesSection;
+    }
+
+    public static void saveToFile(String fileName, Employee[] employees) {
+        try {
+            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
+            outputStream.writeObject(employees);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static Employee[] readFromFile(String fileName, Employee[] employees) {
+        try {
+            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));
+            employees = (Employee[]) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return employees;
     }
 }

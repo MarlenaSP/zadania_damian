@@ -19,13 +19,20 @@ public class Main {
 //        zadanie2.execute(languages);
 
 //        Kadry kadry = new Kadry();
+//        //kadry.odczytajZPliku();
 //        kadry.importujZPlikuTekstowego();
 //        kadry.pisz();
+//        kadry.zapiszDoPliku();
 
         Employee[] employees = new Employee[100];
         Employee.readFromTextFile("employees.txt", employees);
         double mediumWomenSalarySection3 = Employee.mediumSalary(employees, 3, 'K');
         System.out.println("Średnie wynagrodzenie kobiet z działu 3: " + mediumWomenSalarySection3);
+//        Employee.saveToFile("employees.txt", employees);
+//        Employee.readFromFile("employees.txt", employees);
+
+
+
 
     }
 }

@@ -2,7 +2,7 @@ package zadanie3;
 
 import java.io.*;
 
-public class Kadry {
+public class Kadry implements Serializable {
     private Pracownik[] pracownicy;
     private int zatrudnienie;
 
@@ -115,7 +115,7 @@ public class Kadry {
 
     public void zapiszDoPliku() {
         try {
-            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("pracownicy.data"));
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("pracownicy.txt"));
             output.writeObject(pracownicy);
             output.close();
         } catch (IOException e) {
@@ -129,7 +129,6 @@ public class Kadry {
             ObjectInputStream object = new ObjectInputStream(fileInputStream);
             pracownicy = (Pracownik[]) object.readObject();
             object.close();
-
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
