@@ -43,9 +43,9 @@ public class Kadry implements Serializable {
         }
     }
 
-    public void importujZPlikuTekstowego() {
+    public void importujZPlikuTekstowego(String fileName) {
         try {
-            File file = new File("pracownicy.txt");
+            File file = new File(fileName);
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String linia;
@@ -115,7 +115,7 @@ public class Kadry implements Serializable {
 
     public void zapiszDoPliku() {
         try {
-            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("pracownicy.txt"));
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("pracownicy.dat"));
             output.writeObject(pracownicy);
             output.close();
         } catch (IOException e) {
@@ -125,7 +125,7 @@ public class Kadry implements Serializable {
 
     public void odczytajZPliku() {
         try {
-            FileInputStream fileInputStream = new FileInputStream("pracownicy.data");
+            FileInputStream fileInputStream = new FileInputStream("pracownicy.dat");
             ObjectInputStream object = new ObjectInputStream(fileInputStream);
             pracownicy = (Pracownik[]) object.readObject();
             object.close();
