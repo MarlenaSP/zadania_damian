@@ -4,6 +4,7 @@ import zadanie2.Polish;
 import zadanie2.Zadanie2;
 import zadanie3.Kadry;
 import zadanie4.Employee;
+import zadanie5.Lista;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,20 +20,26 @@ public class Main {
 //        zadanie2.execute(languages);
 
 //        Kadry kadry = new Kadry();
-//        //kadry.odczytajZPliku();
-//        kadry.importujZPlikuTekstowego();
+//        kadry.odczytajZPliku();
+//        kadry.importujZPlikuTekstowego("pracownicy.txt");
 //        kadry.pisz();
 //        kadry.zapiszDoPliku();
 
-        Employee[] employees = new Employee[100];
-        Employee.readFromTextFile("employees.txt", employees);
-        double mediumWomenSalarySection3 = Employee.mediumSalary(employees, 3, 'K');
-        System.out.println("Średnie wynagrodzenie kobiet z działu 3: " + mediumWomenSalarySection3);
-//        Employee.saveToFile("employees.txt", employees);
-//        Employee.readFromFile("employees.txt", employees);
+//        Employee[] employees = new Employee[100];
+//        Employee.readFromTextFile("employees.txt", employees);
+//        double mediumWomenSalarySection3 = Employee.mediumSalary(employees, 3, 'K');
+//        System.out.println("Średnie wynagrodzenie kobiet z działu 3: " + mediumWomenSalarySection3);
+//        Employee.saveToFile("employees.dat", employees);
+//        Employee.readFromFile("employees.dat", employees);
 
-
-
-
+        // zadanie5 Lista
+        final int N = 10;
+        Lista l = new Lista(N);
+        for (int i = 0; i < N / 2; ++i) {
+            l.addElement((1 << i));
+        }
+        l.addElement(2);
+        l.addElement(8);
+        l.write();
     }
 }
