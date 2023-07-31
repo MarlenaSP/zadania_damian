@@ -35,11 +35,24 @@ public class Lista {
         System.out.println("Pojemność: " + capacity);
         System.out.println("Rozmiar: " + size);
         System.out.print("Elementy: ");
-        for(int i=0; i<size; i++){
-            System.out.print(numbers[i] +" ");
+        for (int i = 0; i < size; i++) {
+            System.out.print(numbers[i] + " ");
         }
         System.out.println();
     }
+
+    public void removeFirst(int deleteNumber) {
+        for (int i = 0; i < size; i++) {
+            if (numbers[i] == deleteNumber) {
+                for(int j = 0; j < size; j++){
+                    numbers[i+j] = numbers[i+(j+1)];
+                }
+                break;
+            }
+        }
+        size--;
+    }
+
 }
 
 

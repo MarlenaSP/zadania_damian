@@ -41,5 +41,11 @@ public class Main {
         l.addElement(2);
         l.addElement(8);
         l.write();
+        l.removeFirst(2);
+        l.write();
+        for (int i = 0; i < N / 2; ++i) {
+            l.addElement((1 << i));
+        }
+        l.write();
     }
 }
