@@ -1,5 +1,10 @@
 package zadanie5;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Arrays;
+
 public class Lista {
     private int[] numbers;
     private int capacity;
@@ -44,13 +49,45 @@ public class Lista {
     public void removeFirst(int deleteNumber) {
         for (int i = 0; i < size; i++) {
             if (numbers[i] == deleteNumber) {
-                for(int j = 0; j < size; j++){
-                    numbers[i+j] = numbers[i+(j+1)];
+                for (int j = 0; j < size; j++) {
+                    numbers[i + j] = numbers[i + (j + 1)];
                 }
                 break;
             }
         }
         size--;
+    }
+
+    public void removeRepeats() {
+        int[] newTab = new int[capacity];
+        int newSize = 0;
+        boolean ifRepeat;
+        for (int i = 0; i < size; i++) {
+            ifRepeat = false;
+            for (int j = 0; j < newSize; j++) {
+                if (numbers[i] == newTab[j]) {
+                    ifRepeat = true;
+                    break;
+                }
+            }
+            if (!ifRepeat) {
+                newTab[newSize] = numbers[i];
+                newSize++;
+            }
+        }
+        numbers = newTab;
+        size = newSize;
+    }
+
+    public void saveToFile(String fileName) {
+        try {
+            ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(fileName));
+            output.writeObject(Arrays.copyOf(numbers, size));
+            output.close();
+            System.out.println("List saved to file: " + fileName);
+        } catch (IOException e) {
+            System.out.println("Error while saving to file");
+        }
     }
 
 }

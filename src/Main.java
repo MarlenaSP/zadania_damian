@@ -47,5 +47,8 @@ public class Main {
             l.addElement((1 << i));
         }
         l.write();
+        System.out.println("List after removal of the repeats");
+        l.removeRepeats();
+        l.write();
     }
 }
