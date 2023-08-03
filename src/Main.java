@@ -6,6 +6,8 @@ import zadanie3.Kadry;
 import zadanie4.Employee;
 import zadanie5.Lista;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 //        Zadanie1 zadanie = new Zadanie1();
@@ -30,7 +32,8 @@ public class Main {
 //        double mediumWomenSalarySection3 = Employee.mediumSalary(employees, 3, 'K');
 //        System.out.println("Średnie wynagrodzenie kobiet z działu 3: " + mediumWomenSalarySection3);
 //        Employee.saveToFile("employees.dat", employees);
-//        Employee.readFromFile("employees.dat", employees);
+//        Employee[] empl = Employee.readFromFile("employees.dat", employees);
+//        System.out.println(Arrays.toString(empl));
 
         // zadanie5 Lista
         final int N = 10;
