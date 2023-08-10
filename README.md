@@ -1,4 +1,4 @@
-package zadanie3:<br />
+<b>package zadanie3:<b/><br />
 Napisać program do zarządzania danymi działu kadr w firmie. W tym celu należy napisać klasy
 Pracownik oraz Kadry.<br />
 Klasa Pracownik powinna przechowywać następujące dane jako pola prywatne:<br />
