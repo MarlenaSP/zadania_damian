@@ -2,6 +2,7 @@
 Napisać program do zarządzania danymi działu kadr w firmie. W tym celu należy napisać klasy
 Pracownik oraz Kadry.<br />
 <b>Klasa Pracownik</b> powinna przechowywać następujące dane jako pola prywatne:
+
 - imię – typu String;
 - nazwisko – typu String;
 - placa – typu double;
@@ -46,6 +47,7 @@ Klasa ta powinna mieć następujące metody:
 
 <h3><u>package zadanie4:</h3></u>
 Napisać program do zarządzanie danymi pracowników. W tym celu należy utowrzyć <b>klasę Pracownik</b> z następującymi polami:
+
 - imię – typu String;
 - nazwisko – typu String;
 - placa – typu double;
@@ -54,7 +56,7 @@ Napisać program do zarządzanie danymi pracowników. W tym celu należy utowrzy
 
 1. Klasę wyposażyć w konstruktor, którego parametry umożliwiają przypisanie wartości wszytskim polom klasy.
 2. W klasie Pracownik stworzyć statyczną funkcję <b>wczytajZPlikuTekstowego</b>, której zadaniem jest odczytanie danych pracowników zapisanych w pliku tekstowym i utworzenie dla nich obiektów klasy Pracownik. Dane zapisane są w formacie:<br />
-   <p style="text-indent:120px;"> &nbsp;Imię&nbsp;&nbsp; Nazwisko&nbsp;&nbsp; Płaca&nbsp;&nbsp; Płeć&nbsp;&nbsp; Dział <br />
+   <p style="text-indent:140px;"> &nbsp;Imię&nbsp;&nbsp; Nazwisko&nbsp;&nbsp; Płaca&nbsp;&nbsp; Płeć&nbsp;&nbsp; Dział <br />
    <p style="text-indent:60px;">przykład:&nbsp;&nbsp; Jan&nbsp;&nbsp;&nbsp; Kowalski&nbsp;&nbsp;&nbsp; 2010&nbsp;&nbsp;&nbsp;&nbsp; M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;<br />
 Metoda wczytajZPlikuTekstowego przyjmuje 2 parametry:
 
