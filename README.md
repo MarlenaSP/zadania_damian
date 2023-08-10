@@ -1,4 +1,4 @@
-<h3>Zadanie 3:</h3>
+<h3><u>Zadanie 3:</u></h3>
 Napisać program do zarządzania danymi działu kadr w firmie. W tym celu należy napisać klasy
 Pracownik oraz Kadry.<br />
 <b>Klasa Pracownik</b> powinna przechowywać następujące dane jako pola prywatne:
@@ -103,43 +103,8 @@ liczby oraz ustala wartości pozostałych pól klasy;
   nazwa podana powinna być jako pierwszy parametr
 
 Przykładowo, po wykonaniu poniższego fragmentu:<br />
-public static void main(String [] args) {<br />
-final int N = 10;<br />
-Lista l = new Lista(N);<br />
-for (int i = 0; i < N/2; ++i) {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; l.dodajElement( (1 << i) );<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-l.dodajElement(2);<br />
-l.dodajElement(8);<br />
-l.pisz();<br />
-l.usunPierwszy(2);<br />
-l.pisz();<br />
-for (int i = 0; i < N/2; ++i) {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; l.dodajElement( (1 << i) )<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-l.pisz();<br />
-System.out.println("Po usunięciu powtórzeń:");<br />
-l.usunPowtorzenia();<br />
-l.pisz();<br />
-}<br />
+![obraz1](https://github.com/MarlenaSP/zadania_damian/assets/132934736/adcdd6cf-ae88-4e3b-a0b7-c63cb6afdd1f)
 
 Na ekranie powinno zostać wyświetlone:<br />
-Lista:<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Pojemność: 10<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Rozmiar: 7<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Elementy: 1 2 4 8 16 2 8<br />
-Lista:<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Pojemność: 10<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Rozmiar: 6<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Elementy: 1 4 8 16 2 8<br />
-Nie można dodać nowego elementu, osiągnięto maks. pojemność!<br />
-Lista:<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Pojemność: 10<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Rozmiar: 10<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Elementy: 1 4 8 16 2 8 1 2 4 8<br />
-Po usunięciu powtórzeń:<br />
-Lista:<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Pojemność: 10<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Rozmiar: 5<br />
-&nbsp;&nbsp;&nbsp;&nbsp; Elementy: 16 1 2 4 8<br />
+![obraz2](https://github.com/MarlenaSP/zadania_damian/assets/132934736/6425374a-942d-449b-b9c0-12a69dfc9ac3)
 
