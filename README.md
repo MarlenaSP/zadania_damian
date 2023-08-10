@@ -1,4 +1,4 @@
-<h3><span style="color: blue">Zadanie 3:</span></h3>
+<h3><u>Zadanie 3:</u>u</h3>
 Napisać program do zarządzania danymi działu kadr w firmie. W tym celu należy napisać klasy
 Pracownik oraz Kadry.<br />
 <b>Klasa Pracownik</b> powinna przechowywać następujące dane jako pola prywatne:
