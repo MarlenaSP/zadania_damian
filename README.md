@@ -1,8 +1,7 @@
-<h3><u>package zadanie3:</u></h3>
+<h3><span style="color: teal">Zadanie 3:</span></h3>
 Napisać program do zarządzania danymi działu kadr w firmie. W tym celu należy napisać klasy
 Pracownik oraz Kadry.<br />
 <b>Klasa Pracownik</b> powinna przechowywać następujące dane jako pola prywatne:
-
 - imię – typu String;
 - nazwisko – typu String;
 - placa – typu double;
@@ -18,7 +17,6 @@ podanym numerze.
 
 <b>Klasa Kadry</b> służy do przechowywania i zarządzania listą zatrudnionych pracowników i posiada
 następujące pola prywatne:
-
 - private Pracownik [] pracownicy_;
 - private int zatrudnienie_;
 - Pole zatrudnienie_ przechowuje aktualną liczbę pracowników firmy, których dane przechowywane
@@ -44,8 +42,9 @@ Klasa ta powinna mieć następujące metody:
 9. metodę <b>odczytajZPliku</b>, która odczytuje z pliku o podanej nazwie pracowników i dodaje
     ich do listy zatrudnionych. Dane pracowników zapisane są w pliku utworzonym za pomocą
     metody zapiszDoPliku, a więc należy użyć mechanizmu serializacji do ich odczytu.
+___
 
-<h3><u>package zadanie4:</h3></u>
+<h3><span style="color: teal">Zadanie 4:</span></h3>
 Napisać program do zarządzanie danymi pracowników. W tym celu należy utowrzyć <b>klasę Pracownik</b> z następującymi polami:
 
 - imię – typu String;
@@ -56,8 +55,9 @@ Napisać program do zarządzanie danymi pracowników. W tym celu należy utowrzy
 
 1. Klasę wyposażyć w konstruktor, którego parametry umożliwiają przypisanie wartości wszytskim polom klasy.
 2. W klasie Pracownik stworzyć statyczną funkcję <b>wczytajZPlikuTekstowego</b>, której zadaniem jest odczytanie danych pracowników zapisanych w pliku tekstowym i utworzenie dla nich obiektów klasy Pracownik. Dane zapisane są w formacie:<br />
-   <p style="text-indent:140px;"> &nbsp;Imię&nbsp;&nbsp; Nazwisko&nbsp;&nbsp; Płaca&nbsp;&nbsp; Płeć&nbsp;&nbsp; Dział <br />
-   <p style="text-indent:60px;">przykład:&nbsp;&nbsp; Jan&nbsp;&nbsp;&nbsp; Kowalski&nbsp;&nbsp;&nbsp; 2010&nbsp;&nbsp;&nbsp;&nbsp; M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imię&nbsp;&nbsp; Nazwisko&nbsp;&nbsp; Płaca&nbsp;&nbsp; Płeć&nbsp;&nbsp; Dział <br />
+ przykład:&nbsp;&nbsp;&nbsp;&nbsp;Jan&nbsp;&nbsp;&nbsp; Kowalski&nbsp;&nbsp;&nbsp; 2010&nbsp;&nbsp;&nbsp;&nbsp; M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;<br />
+
 Metoda wczytajZPlikuTekstowego przyjmuje 2 parametry:
 
    - nazwę pliku tekstowego z danymi pracowników,&nbsp;
@@ -74,8 +74,9 @@ Wynikiem metody powinna być liczba odczytanych danych (int)
    parametrem jest tablica obiektów typu Pracownik, które powinny zapisane do pliku.
 5. Napisać statyczną metodę <b>odczytZPliku</b>, której zadaniem będzie wczytanie tablicy
    obiektów z pliku (zapisanych metodą zapiszDoPliku).
+___
 
-<h3><u>package zadanie5:</h3></u>
+<h3><span style="color: teal">Zadanie 5:</span></h3>
 Napisać <b>klasę Lista</b>, której zadaniem będzie przechowywać listę liczb całkowitych. Klasa ta mieć
 następujące pola prywatne:
 - int [] liczby; // tablica, w której przechowywane będą liczby
