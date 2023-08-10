@@ -1,7 +1,8 @@
-<h3><span style="color: teal">Zadanie 3:</span></h3>
+<h3>Zadanie 3:</h3>
 Napisać program do zarządzania danymi działu kadr w firmie. W tym celu należy napisać klasy
 Pracownik oraz Kadry.<br />
 <b>Klasa Pracownik</b> powinna przechowywać następujące dane jako pola prywatne:
+
 - imię – typu String;
 - nazwisko – typu String;
 - placa – typu double;
@@ -17,9 +18,9 @@ podanym numerze.
 
 <b>Klasa Kadry</b> służy do przechowywania i zarządzania listą zatrudnionych pracowników i posiada
 następujące pola prywatne:
-- private Pracownik [] pracownicy_;
-- private int zatrudnienie_;
-- Pole zatrudnienie_ przechowuje aktualną liczbę pracowników firmy, których dane przechowywane
+* private Pracownik [] pracownicy_;
+* private int zatrudnienie_;
+* Pole zatrudnienie_ przechowuje aktualną liczbę pracowników firmy, których dane przechowywane
 są w tablicy pracownicy_. Firma nigdy nie będzie zatrudniać więcej niż 100 pracowników.
 
 Klasa ta powinna mieć następujące metody:
@@ -44,7 +45,7 @@ Klasa ta powinna mieć następujące metody:
     metody zapiszDoPliku, a więc należy użyć mechanizmu serializacji do ich odczytu.
 ___
 
-<h3><span style="color: teal">Zadanie 4:</span></h3>
+<h3>Zadanie 4:</h3>
 Napisać program do zarządzanie danymi pracowników. W tym celu należy utowrzyć <b>klasę Pracownik</b> z następującymi polami:
 
 - imię – typu String;
@@ -76,7 +77,7 @@ Wynikiem metody powinna być liczba odczytanych danych (int)
    obiektów z pliku (zapisanych metodą zapiszDoPliku).
 ___
 
-<h3><span style="color: teal">Zadanie 5:</span></h3>
+<h3>Zadanie 5:</h3>
 Napisać <b>klasę Lista</b>, której zadaniem będzie przechowywać listę liczb całkowitych. Klasa ta mieć
 następujące pola prywatne:
 - int [] liczby; // tablica, w której przechowywane będą liczby
